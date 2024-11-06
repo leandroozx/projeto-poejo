@@ -1,0 +1,334 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #e9f5e9;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/alecrim-header.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(34, 139, 34, 0.9);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+#navbar.sticky {
+    background-color: #228B22;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #adff2f;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #adff2f;
+}
+
+.logo span {
+    color: #fff;
+}
+
+.header-content {
+    max-width: 600px;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+header h1 span {
+    color: #adff2f;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+header .btn {
+    background-color: #adff2f;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+header .btn:hover {
+    background-color: #7cfc00;
+    color: #fff;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-dark {
+    background-color: #f0fff0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #adff2f;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.section-content {
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+}
+
+.section-image img {
+    display: inline-block; /* Permite centralizar a imagem com text-align */
+    width: 35%;
+    margin-top: -20px;
+    border-radius: 66px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-text p {
+    margin: 00px 0; /* Ajusta a margem dos parágrafos, se necessário */
+    font-size: 1.4rem; /* Ajusta o tamanho da fonte para melhor visibilidade */
+    color: #666; /* Ajusta a cor do texto */
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.benefit-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-item i {
+    font-size: 3rem;
+    color: #adff2f;
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.usos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.usos-item {
+    text-align: center;
+    position: relative; /* Necessário para usar posicionamento absoluto nas imagens */
+}
+
+.usos-item img {
+    width: 35%;
+    margin-top: 5px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.usos-item:hover img {
+    transform: scale(1.1); /* Efeito de zoom suave */
+}
+
+.usos-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.usos-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.cultivo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cultivo-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.cultivo-item:hover {
+    transform: translateY(-10px); /* Efeito de elevação suave */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cultivo-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cultivo-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.curiosidades-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#footer {
+    background-color: #228B22;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+    }
+
+    .benefits-grid, .usos-grid, .cultivo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Layout para telas pequenas, como celulares */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .nav-links {
+        display: none; /* Oculta o menu de navegação padrão */
+    }
+
+    .burger {
+        display: block; /* Mostra o menu hambúrguer */
+    }
+
+    .section-content {
+        flex-direction: column; /* Alinha o conteúdo verticalmente */
+    }
+}
+
+/* Layout para telas médias, como tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-content {
+        flex-direction: row; /* Ajusta a direção do layout para telas médias */
+    }
+}
